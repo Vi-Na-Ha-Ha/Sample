@@ -264,7 +264,7 @@ Header Style
 }
 
 .header-area .main-nav .logo {
-  margin-top: 9px;
+  margin-top: 5px;
   flex-basis: 20%;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -273,7 +273,8 @@ Header Style
 }
 
 .header-area .main-nav .logo img {
-  max-width: 142px;
+  max-width: 180px;
+
 }
 
 .background-header .main-nav .logo {
@@ -284,6 +285,7 @@ Header Style
   flex-basis: 60%;
   height: 70px;
   margin-top: 0px;
+  margin-left: auto;
   margin-right: 0px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -931,7 +933,7 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/Back.svg);
+  background-image: url(../images/Back1.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1143,8 +1145,10 @@ section.popular-categories .main-button {
 }
 
 .popular-item .top-content {
-  display: flex;
   margin-bottom: 30px;
+  display: flex; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
 }
 
 .popular-item .icon {
@@ -1183,6 +1187,7 @@ section.popular-categories .main-button {
   margin-right: 10px;
 }
 
+
 .popular-item span {
   color: #afafaf;
   font-weight: 400;
@@ -1195,6 +1200,19 @@ section.popular-categories .main-button {
 .popular-item .thumb {
   position: relative;
   overflow: hidden;
+  display: flex; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+.popular-item .thumb img {
+  max-height: 170px; 
+  height: auto;
+  width: auto; 
+  border-radius: 7px;
+  border-top-left-radius: 7px;
+  object-fit: cover; 
+  
 }
 
 .popular-item .thumb span.category {
@@ -1208,6 +1226,9 @@ section.popular-categories .main-button {
   top: -60px;
   padding: 8px 12px;
   opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition: all .3s;
 }
 
@@ -1227,7 +1248,6 @@ section.popular-categories .main-button {
 
 .popular-item .thumb:hover span.category,
 .popular-item .thumb:hover span.likes {
-  top: 15px;
   opacity: 1;
 }
 
@@ -1239,6 +1259,25 @@ section.popular-categories .main-button {
   width: 100%;
   text-align: center;
 }
+
+@media (max-width: 1300px) { /* For phones */
+  .popular-item .thumb img {
+    max-height: 130px; /* Further reduced height for phone screens */
+  }
+}
+@media (max-width: 800px) { /* For phones */
+  .popular-item .thumb img {
+    max-height: 10px; /* Further reduced height for phone screens */
+  }
+}
+
+@media (max-width: 480px) { /* For phones */
+  .popular-item .thumb img {
+    max-height: 100px; /* Further reduced height for phone screens */
+  }
+}
+
+
 
 
 /*
@@ -1261,9 +1300,10 @@ section.closed-contests {
 }
 
 .closed-item .thumb img {
-  height: 380px; 
+  max-height: 220px; 
+  height: auto;
   width: auto; 
-  border-top-right-radius: 15px;
+  border-radius: 15px;
   border-top-left-radius: 15px;
   object-fit: cover; 
 }
@@ -2584,6 +2624,7 @@ section.contact-us .info-item a:hover {
 .about-section .social-icons .icon {
   width: 30px; /* Adjusted icon size */
   height: 30px;
+  color: #7fdbca ;
 }
 
 .about-section .social-icons .icon img {
@@ -2593,8 +2634,9 @@ section.contact-us .info-item a:hover {
   transition: transform 0.3s ease;
 }
 
-.about-section .social-icons .icon img:hover {
+.about-section .social-icons .icon:hover {
   transform: scale(1.1);
+  color: #ffffff
 }
 
 @media (max-width: 991px) {

@@ -29,6 +29,8 @@
   .owl-carousel .owl-stage-outer {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: auto;
     /* fix for flashing background */
     -webkit-transform: translate3d(0px, 0px, 0px); }
   .owl-carousel .owl-wrapper,
@@ -42,13 +44,18 @@
   .owl-carousel .owl-item {
     position: relative;
     min-height: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
     float: left;
     -webkit-backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none; }
   .owl-carousel .owl-item img {
     display: block;
-    width: 100%; }
+    width: auto; }
   .owl-carousel .owl-nav.disabled,
   .owl-carousel .owl-dots.disabled {
     display: none; }
