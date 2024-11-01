@@ -2317,6 +2317,56 @@ Categories Page
   border: 1px solid #00bdfe;
 }
 
+.gallery {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.text-center {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Space between gallery items */
+}
+
+.gallery-item {
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s;
+}
+
+.gallery-item img {
+  width: 100%;
+  max-width: 300px;
+  flex-flow: row wrap;
+  height: 100%;
+  object-fit: cover; /* Cover the entire space without distortion */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.tall {
+  height: 250px; /* Set a fixed height for tall images */
+  overflow: hidden;
+}
+
+.tall img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 
 /* 
 ---------------------------------------------
