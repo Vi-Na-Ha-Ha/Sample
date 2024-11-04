@@ -225,6 +225,137 @@ section {
 }
 
 
+
+.popup button {
+  display: block;
+  margin: 0 0 20px auto;
+  background-color: transparent;
+  font-size: 30px;
+  color: #ffffff;
+  background: #03549a;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Added transition */
+}
+
+.popup button:hover {
+  background-color: #0f72e5; /* Change background color on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+.popup {
+  background-color: #ffffff;
+  width: 360px; /* Reduced the width */
+  padding: 20px 20px; /* Reduced the padding */
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border: 2px solid #0f72e5;
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  display: none;
+  text-align: center;
+  z-index: 1000;
+}
+
+.popup h2 {
+  margin-top: 0; /* Adjusted margin to remove excess space */
+  font-size: 40px; /* Reduced font size */
+}
+
+.popup p {
+  font-size: 20px; /* Reduced font size */
+  text-align:center;
+  margin: 10px 0; /* Reduced margin */
+  line-height: 22px; /* Adjusted line height */
+}
+
+.popup a {
+  display: inline-block; /* Changed to 'inline-block' for better centering */
+  width: auto; /* Adjusted width */
+  padding: 8px 20px; /* Adjusted padding */
+  margin: 15px auto 0; /* Adjusted margin */
+  text-align: center;
+  background-color: #0f72e5;
+  border-radius: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.popup a:hover {
+  background-color: #03549a;
+}
+
+
+.popup a:hover {
+  background-color: #03549a;
+}
+
+.popup button#scroll-button {
+  display: block;
+  margin: 10px auto; /* Centers the button horizontally */
+  background-color: #0f72e5;
+  border-radius: 20px;
+  color: #ffffff;
+  padding: 8px 0; /* Adjust this if needed for better vertical centering */
+  width: 150px; /* Same width as before */
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size if needed */
+  line-height: normal; /* Ensures text is vertically centered */
+}
+
+.popup button#scroll-button:hover {
+  background-color: #03549a;
+}
+
+@media (max-width: 480px) {
+  .popup {
+    width: 90%; /* Make the popup take 90% of the screen width */
+    padding: 15px 20px; /* Reduce the padding */
+  }
+
+  .popup h2 {
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
+
+  .popup p {
+    font-size: 12px; /* Reduce font size for smaller screens */
+    line-height: 20px; /* Adjust line height */
+  }
+
+  .popup a {
+    padding: 6px 15px; /* Reduce padding of the button */
+    font-size: 13px; /* Adjust button font size */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .popup {
+    width: 80%; /* Make the popup take 80% of the screen width */
+    padding: 25px 35px; /* Slightly larger padding for medium screens */
+  }
+
+  .popup h2 {
+    font-size: 20px; /* Increase font size for better visibility */
+  }
+
+  .popup p {
+    font-size: 14px; /* Adjust paragraph font size */
+    line-height: 24px; /* Slightly larger line height */
+  }
+
+  .popup a {
+    padding: 8px 20px; /* Increase padding for button */
+    font-size: 14px; /* Adjust button font size */
+  }
+}
+
+
 /* 
 ---------------------------------------------
 Header Style
